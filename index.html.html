@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shenyss Kiss Kiss — Boutique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white: #fffaf8;
+      --ink: #2c2228;
+      --pink: #d6487a;
+      --pink-deep: #a8285a;
+      --pink-dark: #5c1733;
+      --pink-soft: #f6dde6;
+      --gold: #b08d3f;
+      --gold-light: #cdab63;
+      --line: rgba(214, 72, 122, .28);
+      --txt-soft: rgba(44, 34, 40, .6);
+      --txt-light: rgba(255, 250, 248, .85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: .02em;
+      line-height: 1.7;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(255, 250, 248, .95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background: #15130f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--gold-light);
+      font-size: 15px;
+    }
+
+    .brand-name {
+      color: var(--ink);
+      font-size: 13px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .brand-name span {
+      color: var(--gold);
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 9px;
+      letter-spacing: .18em;
+      color: var(--txt-soft);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .navlinks a {
+      color: var(--txt-soft);
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: color .3s;
+    }
+
+    .navlinks a:hover {
+      color: var(--pink);
+    }
+
+    .cart-btn {
+      position: relative;
+      background: none;
+      border: 1px solid var(--line);
+      padding: 7px 14px;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      transition: .3s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .cart-btn:hover {
+      background: var(--pink-soft);
+    }
+
+    .cart-count {
+      background: var(--pink);
+      color: #fff;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+
+    @media (max-width:720px) {
+      .navlinks .nav-only {
+        display: none;
+      }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(ellipse at 50% -10%, rgba(214, 72, 122, .16), transparent 60%), var(--white);
+      color: var(--ink);
+      padding: 160px 24px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero .eyebrow {
+      font-size: 10.5px;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 76px);
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--pink);
+    }
+
+    .hero p {
+      max-width: 430px;
+      margin: 22px auto 36px;
+      color: var(--txt-soft);
+      font-size: 13.5px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 34px;
+      border: 1px solid var(--pink);
+      color: var(--pink-deep);
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      transition: .35s;
+      background: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+    }
+
+    .btn:hover {
+      background: var(--pink);
+      color: var(--white);
+      border-color: var(--pink);
+    }
+
+    .scrolldown {
+      position: absolute;
+      bottom: 34px;
+      font-size: 9.5px;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--txt-soft);
+    }
+
+    .scrolldown::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 34px;
+      background: var(--pink);
+      margin: 8px auto 0;
+      animation: dn 2s infinite;
+    }
+
+    @keyframes dn {
+      0% {
+        transform: scaleY(0);
+        opacity: 0;
+      }
+
+      40% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scaleY(1);
+        opacity: 0;
+      }
+    }
+
+    /* ── SECTION ── */
+    .section {
+      padding: 96px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-head .eyebrow {
+      font-size: 10px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+    }
+
+    .section-head h2 {
+      font-size: 34px;
+      font-weight: 500;
+      margin-top: 10px;
+      color: var(--ink);
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--pink);
+      margin: 18px auto 0;
+    }
+
+    /* ── GRID DE CATEGORIAS ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--pink-soft);
+    }
+
+    .item {
+      all: unset;
+      position: relative;
+      aspect-ratio: 3/4;
+      background: #fbecf0;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(92, 23, 51, .82) 100%);
+      opacity: .85;
+      transition: .4s;
+    }
+
+    .item:hover::after {
+      opacity: 1;
+    }
+
+    .item:hover .tag {
+      transform: translateY(-4px);
+    }
+
+    .item .ph {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(168, 40, 90, .32);
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 14px;
+    }
+
+    .item .tag {
+      position: relative;
+      z-index: 2;
+      padding: 18px;
+      color: var(--white);
+      width: 100%;
+      text-align: left;
+      transition: transform .3s;
+    }
+
+    .item .tag .cat {
+      font-size: 9px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: #f3b9cc;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .item .tag .nm {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .item .tag .see {
+      display: block;
+      font-size: 9px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(255, 250, 248, .75);
+      margin-top: 6px;
+    }
+
+    @media (max-width:900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width:500px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    /* ── STRIP SALÃO ── */
+    .strip {
+      background: var(--pink-dark);
+      color: var(--white);
+    }
+
+    .strip .wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 100px 32px;
+    }
+
+    .strip .ph-img {
+      aspect-ratio: 4/5;
+      background: rgba(255, 250, 248, .06);
+      border: 1px solid rgba(255, 250, 248, .18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--txt-light);
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .strip h3 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .strip p {
+      color: var(--txt-light);
+      font-size: 13px;
+      margin-bottom: 26px;
+    }
+
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .checklist li {
+      font-size: 12.5px;
+      color: var(--txt-light);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #f3b9cc;
+    }
+
+    .strip .btn {
+      border-color: #f3b9cc;
+      color: #f3b9cc;
+    }
+
+    .strip .btn:hover {
+      background: #f3b9cc;
+      color: var(--pink-dark);
+    }
+
+    @media (max-width:760px) {
+      .strip .wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--pink-dark);
+      color: var(--txt-light);
+      border-top: 1px solid rgba(255, 250, 248, .12);
+    }
+
+    .foot-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding: 80px 32px 50px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    footer h4 {
+      color: #f3b9cc;
+      font-size: 10.5px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    footer .fbrand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 12.5px;
+      color: var(--txt-light);
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    footer ul a {
+      transition: .3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid transparent;
+    }
+
+    footer ul a:hover {
+      color: #fff;
+      border-color: rgba(255, 250, 248, .3);
+      background: rgba(255, 250, 248, .08);
+      transform: translateX(4px);
+    }
+
+    footer ul a:active {
+      transform: translateX(2px);
+    }
+
+    .map-box {
+      margin-top: 14px;
+      border: 1px solid rgba(255, 250, 248, .18);
+      overflow: hidden;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 150px;
+      border: 0;
+      display: block;
+      filter: grayscale(20%);
+    }
+
+    .foot-bottom {
+      border-top: 1px solid rgba(255, 250, 248, .12);
+      text-align: center;
+      padding: 22px 0;
+      font-size: 10.5px;
+      letter-spacing: .08em;
+      color: rgba(255, 250, 248, .4);
+    }
+
+    @media (max-width:760px) {
+      .foot-top {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── MODAL GALERIA ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(44, 34, 40, .82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      padding: 20px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal {
+      background: var(--white);
+      max-width: 860px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      border: 1px solid var(--pink-soft);
+      padding: 42px 36px;
+      position: relative;
+    }
+
+    .modal-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      margin: -42px -36px 22px;
+      padding: 13px 36px;
+      border-bottom: 1px solid var(--pink-soft);
+    }
+
+    .btn-voltar {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--pink-deep);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: .25s;
+    }
+
+    .btn-voltar:hover {
+      background: var(--pink);
+    }
+
+    .btn-voltar .seta {
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      color: var(--pink-deep);
+      line-height: 1;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: .25s;
+    }
+
+    .modal-close:hover {
+      background: var(--pink-soft);
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      padding-top: 6px;
+    }
+
+    .btn-voltar-bottom {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      border: 1px solid var(--pink);
+      color: var(--pink-deep);
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 12px 26px;
+      border-radius: 30px;
+      transition: .25s;
+    }
+
+    .btn-voltar-bottom:hover {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    /* ── ZOOM / VISUALIZADOR ── */
+    .zoom-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 20, 26, .94);
+      z-index: 300;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .zoom-overlay.open {
+      display: flex;
+    }
+
+    .zoom-close {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: rgba(255, 255, 255, .12);
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 20px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .25s;
+      z-index: 5;
+    }
+
+    .zoom-close:hover {
+      background: var(--pink);
+    }
+
+    .zoom-box {
+      display: flex;
+      gap: 30px;
+      max-width: 1000px;
+      width: 100%;
+      max-height: 90vh;
+      align-items: center;
+    }
+
+    .zoom-img-wrap {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      max-height: 90vh;
+      overflow: auto;
+      border-radius: 4px;
+    }
+
+    .zoom-img-wrap img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+      display: block;
+      cursor: zoom-in;
+      transition: transform .25s ease;
+      border-radius: 4px;
+    }
+
+    .zoom-img-wrap.zoomed {
+      cursor: zoom-out;
+    }
+
+    .zoom-img-wrap.zoomed img {
+      max-width: none;
+      max-height: none;
+      width: 170%;
+      cursor: zoom-out;
+    }
+
+    .zoom-hint {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, .55);
+      color: #fff;
+      font-size: 11px;
+      letter-spacing: .05em;
+      padding: 6px 14px;
+      border-radius: 20px;
+      pointer-events: none;
+      transition: .3s;
+      white-space: nowrap;
+    }
+
+    .zoom-img-wrap.zoomed .zoom-hint {
+      opacity: 0;
+    }
+
+    .zoom-info {
+      width: 250px;
+      flex-shrink: 0;
+      background: var(--white);
+      padding: 28px 24px;
+      border-radius: 4px;
+    }
+
+    .zoom-info .zoom-name {
+      font-size: 19px;
+      color: var(--ink);
+      font-family: 'Jost', sans-serif;
+      margin-bottom: 8px;
+    }
+
+    .zoom-info .zoom-price {
+      font-size: 16px;
+      color: var(--pink-deep);
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .zoom-add {
+      width: 100%;
+      padding: 13px;
+      background: var(--pink-deep);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      border-radius: 30px;
+      transition: .25s;
+      margin-bottom: 12px;
+    }
+
+    .zoom-add:hover {
+      background: var(--pink);
+    }
+
+    .zoom-voltar {
+      width: 100%;
+      padding: 12px;
+      background: none;
+      border: 1px solid var(--pink);
+      color: var(--pink-deep);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border-radius: 30px;
+      transition: .25s;
+    }
+
+    .zoom-voltar:hover {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    @media (max-width:600px) {
+      .zoom-box {
+        flex-direction: column;
+        gap: 14px;
+        max-height: 92vh;
+        overflow-y: auto;
+      }
+
+      .zoom-info {
+        width: 100%;
+        padding: 20px 18px;
+      }
+
+      .zoom-img-wrap {
+        max-height: 60vh;
+      }
+
+      .zoom-img-wrap img {
+        max-height: 60vh;
+      }
+
+      .zoom-img-wrap.zoomed img {
+        width: 150%;
+      }
+    }
+
+    .modal-eyebrow {
+      font-size: 9.5px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+    }
+
+    .modal h3 {
+      font-size: 28px;
+      margin-top: 6px;
+      margin-bottom: 26px;
+      color: var(--ink);
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .modal-card {
+      border: 1px solid var(--pink-soft);
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .modal-card:hover {
+      border-color: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .modal-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+
+    .modal-card .cap {
+      padding: 10px 12px;
+    }
+
+    .modal-card .cap .pname {
+      font-size: 12px;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .modal-card .cap .pprice {
+      font-size: 11px;
+      color: var(--pink-deep);
+      margin-top: 3px;
+    }
+
+    .modal-card .add-btn {
+      width: 100%;
+      padding: 9px;
+      background: none;
+      border: none;
+      border-top: 1px solid var(--pink-soft);
+      color: var(--pink-deep);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Jost', sans-serif;
+      transition: .3s;
+    }
+
+    .modal-card .add-btn:hover {
+      background: var(--pink);
+      color: #fff;
+    }
+
+    .modal-empty {
+      font-size: 12.5px;
+      color: var(--txt-soft);
+      padding: 20px 0;
+    }
+
+    @media (max-width:600px) {
+      .modal-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .modal {
+        padding: 28px 18px;
+      }
+
+      .modal-topbar {
+        margin: -28px -18px 18px;
+        padding: 12px 18px;
+      }
+    }
+
+    /* ── CARRINHO LATERAL ── */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -420px;
+      width: 380px;
+      max-width: 100vw;
+      height: 100vh;
+      background: var(--white);
+      z-index: 300;
+      box-shadow: -4px 0 32px rgba(92, 23, 51, .18);
+      transition: right .4s cubic-bezier(.4, 0, .2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      flex-shrink: 0;
+    }
+
+    .cart-header h3 {
+      font-size: 20px;
+      color: var(--ink);
+    }
+
+    .cart-close-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--pink-deep);
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--pink-soft);
+    }
+
+    .cart-item img {
+      width: 72px;
+      height: 96px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-name {
+      font-size: 13px;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .cart-item-cat {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      margin-bottom: 8px;
+    }
+
+    .cart-item-qty {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qty-btn {
+      background: none;
+      border: 1px solid var(--line);
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qty-btn:hover {
+      border-color: var(--pink);
+      color: var(--pink);
+    }
+
+    .qty-num {
+      font-size: 13px;
+      min-width: 20px;
+      text-align: center;
+    }
+
+    .cart-item-remove {
+      background: none;
+      border: none;
+      color: rgba(168, 40, 90, .4);
+      cursor: pointer;
+      font-size: 13px;
+      margin-left: auto;
+      align-self: flex-start;
+      padding: 2px;
+    }
+
+    .cart-item-remove:hover {
+      color: var(--pink);
+    }
+
+    .cart-empty-msg {
+      text-align: center;
+      padding: 40px 0;
+      color: var(--txt-soft);
+      font-size: 13px;
+    }
+
+    .cart-footer {
+      padding: 20px 24px;
+      border-top: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      font-size: 13px;
+      color: var(--ink);
+    }
+
+    .cart-total strong {
+      font-weight: 500;
+    }
+
+    .whatsapp-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #25d366;
+      color: #fff;
+      border: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s;
+      text-align: center;
+    }
+
+    .whatsapp-btn:hover {
+      background: #1da851;
+    }
+
+    .whatsapp-btn svg {
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-right: 8px;
+      fill: #fff;
+    }
+
+    .cart-note {
+      font-size: 10.5px;
+      color: var(--txt-soft);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* overlay escuro ao abrir carrinho */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(44, 34, 40, .4);
+      z-index: 299;
+      display: none;
+    }
+
+    .cart-overlay.open {
+      display: block;
+    }
+
+    /* toast notificação */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--pink-dark);
+      color: #fff;
+      padding: 10px 22px;
+      font-size: 11.5px;
+      letter-spacing: .1em;
+      z-index: 400;
+      opacity: 0;
+      transition: .4s;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="brand">
+        <div class="brand-mark">K</div>
+        <div>
+          <div class="brand-name">Shenyss Kiss <span>Kiss</span></div>
+          <span class="brand-sub">Boutique</span>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="#colecao" class="nav-only">Coleção</a>
+        <a href="#salao" class="nav-only">Salão</a>
+        <a href="#contato" class="nav-only">Contato</a>
+        <button class="cart-btn" id="openCart" aria-label="Carrinho">
+          🛍 Carrinho
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <span class="eyebrow">Vestuário · Calçados · Acessórios</span>
+    <h1>Elegância em<br><em>cada detalhe</em></h1>
+    <p>Peças selecionadas a dedo para a mulher que aprecia o requinte do simples bem feito.</p>
+    <a href="#colecao" class="btn">Ver coleção</a>
+    <span class="scrolldown">Scroll</span>
+  </section>
+
+  <!-- ── COLEÇÃO ── -->
+  <section class="section" id="colecao">
+    <div class="wrap section-head">
+      <span class="eyebrow">A Coleção</span>
+      <h2>Novidades da semana</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid">
+      <button type="button" class="item" data-cat="vestidos" style="background-image:url('https://i.ibb.co/tTrncBYy/produto001.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Vestidos</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="blusas" style="background-image:url('https://i.ibb.co/PfPdSXX/produto002.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Blusas</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="conjuntos" style="background-image:url('https://i.ibb.co/WWrMJrhL/produto003.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Conjuntos</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="calcados" style="background-image:url('https://i.ibb.co/ZRgWywxS/produto004.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Calçados</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="calcas" style="background-image:url('https://i.ibb.co/LdK9gxyH/produto005.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Calças</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="produtos" style="background-image:url('https://i.ibb.co/CprQt129/produto006.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Produtos</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="calcinhas" style="background-image:url('https://i.ibb.co/SXhMfmx8/produto007.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Biquínes</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="cintos" style="background-image:url('https://i.ibb.co/Zzhv0DRt/produto008.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Cintos</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="colares" style="background-image:url('https://i.ibb.co/CRV7gYJ/produto009.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Colares</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="gym" style="background-image:url('https://i.ibb.co/L7PxYRZ/produto010.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Roupas de Gym</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="macacoes" style="background-image:url('https://i.ibb.co/k6m7ZK4g/produto011.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Macacão</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="bolsas" style="background-image:url('https://i.ibb.co/prn6JXV7/produto012.jpg');background-size:cover;background-position:center;">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Bolsas</span><span class="see">Ver peças →</span></div>
+      </button>
+      <button type="button" class="item" data-cat="camisolas" style="background-image:url('https://i.ibb.co/20fLjypB/produto013.jpg')">
+        <div class="ph"></div>
+        <div class="tag"><span class="cat">Coleção</span><span class="nm">Camisolas</span><span class="see">Ver peças →</span></div>
+      </button>
+    </div>
+  </section>
+
+  <!-- ── BOUTIQUE ── -->
+  <section class="strip" id="boutique">
+    <div class="wrap">
+      <div class="ph-img" style="background-image:url('https://i.ibb.co/7NX4xZHF/produto014.jpg');background-size:cover;background-position:center;min-height:300px;border:none;"></div>
+      <div>
+        <h3 class="serif">Boutique Kiss Kiss</h3>
+        <p>Um espaço pensado para cuidar de você por dentro e por fora — da escolha do look ao toque final do visual.</p>
+        <ul class="checklist">
+          <li>Atendimento personalizado</li>
+          <li>Provador exclusivo</li>
+          <li>Curadoria de estilo sob medida</li>
+          <li>Entrega para toda a região</li>
+        </ul>
+        <a href="https://wa.me/258823914150?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Shenyss%20Kiss%20Kiss." target="_blank" rel="noopener" class="btn">Agendar atendimento</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="contato">
+    <div class="foot-top">
+      <div>
+        <div class="fbrand">Shenyss Kiss Kiss</div>
+        <p>Boutique de moda feminina — vestuário, calçados e acessórios selecionados com exclusividade. Localizada na Matola, Moçambique.</p>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238193.64866624537!2d32.32098!3d-25.9666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69b7d189d7e71%3A0xb421b07d50c2b1c4!2sMatola%2C%20Mozambique!5e0!3m2!1sen!2s!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Kiss Kiss — Matola">
+          </iframe>
+        </div>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>
+            <a href="https://wa.me/258823914150?text=Olá%20Kiss%20Kiss!%20Vim%20pelo%20site%20e%20tenho%20uma%20dúvida." target="_blank" rel="noopener">
+              💬 WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/kiss_kiss_oficialstore?igsh=aGxlM3I0MzFyMXJk&utm_source=qr" target="_blank" rel="noopener">
+              📸 Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@gata.kiss_kiss?_r=1&_t=ZS-97X1WmZvNif" target="_blank" rel="noopener">
+              🎵 TikTok
+            </a>
+          </li>
+          <li>
+            <a href="tel:+258823914150">
+              📞 823 914 150
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4>Localização</h4>
+        <p>
+          Matola<br>
+          Maputo — Moçambique<br><br>
+          Aberto de segunda a sábado<br>
+          08h00 – 18h00
+        </p>
+      </div>
+    </div>
+    <div class="foot-bottom">©️ 2026 Shenyss Kiss Kiss Boutique. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- ── MODAL GALERIA ── -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-topbar">
+        <button class="btn-voltar" id="modalBack"><span class="seta">←</span> Voltar</button>
+        <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+      </div>
+      <span class="modal-eyebrow" id="modalEyebrow">Coleção</span>
+      <h3 id="modalTitle" class="serif">Produtos</h3>
+      <div class="modal-grid" id="modalGrid"></div>
+      <div class="modal-footer">
+        <button class="btn-voltar-bottom" id="modalBackBottom"><span class="seta">←</span> Voltar às categorias</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ZOOM / VISUALIZADOR DE ARTIGO ── -->
+  <div class="zoom-overlay" id="zoomOverlay">
+    <button class="zoom-close" id="zoomClose" aria-label="Fechar">✕</button>
+    <div class="zoom-box">
+      <div class="zoom-img-wrap" id="zoomImgWrap">
+        <img id="zoomImg" src="" alt="">
+        <span class="zoom-hint" id="zoomHint">🔍 Toque na foto para ampliar</span>
+      </div>
+      <div class="zoom-info">
+        <div class="zoom-name" id="zoomName"></div>
+        <div class="zoom-price" id="zoomPrice"></div>
+        <button class="zoom-add" id="zoomAdd">+ Adicionar ao carrinho</button>
+        <button class="zoom-voltar" id="zoomVoltar"><span class="seta">←</span> Voltar à categoria</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CARRINHO LATERAL ── -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 class="serif">O seu carrinho</h3>
+      <button class="cart-close-btn" id="closeCart" aria-label="Fechar">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty-msg">O carrinho está vazio.<br>Adicione peças da coleção!</div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total estimado</span>
+        <strong id="cartTotal">—</strong>
+      </div>
+      <button class="whatsapp-btn" id="sendWhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.553 4.122 1.523 5.855L.057 23.6a.5.5 0 00.609.61l5.885-1.543A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.799 9.799 0 01-5.003-1.373l-.358-.213-3.713.974.992-3.617-.234-.372A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z" />
+        </svg>
+        Encomendar pelo WhatsApp
+      </button>
+      <p class="cart-note">Será redirecionada para o WhatsApp com a lista de pedidos.</p>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">✓ Produto adicionado ao carrinho</div>
+
+  <script>
+    /* =====================================================================
+   PRODUTOS DA LOJA
+   Para adicionar produto:
+   { img: "URL_DA_FOTO", nome: "Nome do Produto", preco: "150 MT" }
+===================================================================== */
+    const produtos = {
+      vestidos: {
+        titulo: "Vestidos",
+        itens: [
+          // { img: "https://link.jpg", nome: "Vestido Floral", preco: "850 MT" },
+          {
+            img: "https://i.ibb.co/v6RYS4QV/produto015.jpg",
+            nome: "Vestido Bordô Corset",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/cXRJ2drx/produto016.jpg",
+            nome: "Vestido Branco Frente Única",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/ZzLQDWSR/produto017.jpg",
+            nome: "Vestido Chemise Azul",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/gFVkfrf2/produto018.jpg",
+            nome: "Vestido Midi Preto Fenda",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/9ms66FcP/produto019.jpg",
+            nome: "Vestido Branco Floral Azul",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/B2sNk51X/produto020.jpg",
+            nome: "Vestido Cai-Cai Azul Bebé",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/LdbpPD2Z/produto021.jpg",
+            nome: "Vestido Branco Corações",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/60XF61mH/produto022.jpg",
+            nome: "Vestido Rosa Laço",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/nq88dYkz/produto023.jpg",
+            nome: "Vestido Vinho Laço",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/gZtk2Rb8/produto024.jpg",
+            nome: "Vestido Azul Laço",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/kVNt5c37/produto025.jpg",
+            nome: "Vestido Castanho Napa",
+            preco: "4 000 MT"
+          }
+        ]
+      },
+      blusas: {
+        titulo: "Blusas",
+        itens: [{
+            img: "https://i.ibb.co/MyZnhTsg/produto026.jpg",
+            nome: "Blusa Estampada Verde Geométrica",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/DHXjRfJ6/produto027.jpg",
+            nome: "Blusa Animal Print Zebra",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/spp3jcHr/produto028.jpg",
+            nome: "Blusa Gola Alta Zíper Azul Serenity",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/67fFpcFV/produto029.jpg",
+            nome: "Blusa Estampada Folhagem Verde",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/fYN85RkW/produto030.jpg",
+            nome: "T-shirt Desportiva Azul",
+            preco: "1800 MT"
+          },
+          {
+            img: "https://i.ibb.co/W4Vf7S5M/produto031.jpg",
+            nome: "T-shirt Desportiva Verde Oliva",
+            preco: "1800 MT"
+          },
+          {
+            img: "https://i.ibb.co/5hx2kjtS/produto032.jpg",
+            nome: "T-shirt Desportiva Lilás",
+            preco: "1800 MT"
+          },
+          {
+            img: "https://i.ibb.co/JWtGQCcC/produto033.jpg",
+            nome: "Top Nó Branco Desportivo",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/c9z7WWr/produto034.jpg",
+            nome: "Top Nó Lilás Desportivo",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/B5dsnT7K/produto035.jpg",
+            nome: "Blusa Decote Quadrado Azul Royal",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/1t8DhZxs/produto036.jpg",
+            nome: "Blusa Amarração Verde Militar",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/hR2wRpvq/produto037.jpg",
+            nome: "Blusa Decote Quadrado Amarela",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/nNBk66TD/produto038.jpg",
+            nome: "Blusa Decote Quadrado Rosa Choque",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/hFSB3C80/produto039.jpg",
+            nome: "Kit Blusas Básicas Coloridas",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/GvhZm5zr/produto040.jpg",
+            nome: "Blusa Branca Decote Quadrado",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/r2fCD24X/produto041.jpg",
+            nome: "Blusa Alças Verde",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/HD6r7fYR/produto042.jpg",
+            nome: "Blusa Alças Vermelha",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/ycB0MyTk/produto043.jpg",
+            nome: "Blusa Alças Azul Royal",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/p61bwRxZ/produto044.jpg",
+            nome: "Blusa Um Ombro Branca",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/YTjf9kmW/produto045.jpg",
+            nome: "Blusa Vintage Amarela",
+            preco: "2000 MT"
+          },
+          {
+            img: "https://i.ibb.co/x87mDnfJ/produto046.jpg",
+            nome: "Body — Azul, Verde, Bege, Branco",
+            preco: "2 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/mVrxyzpQ/produto047.jpg",
+            nome: "Body Salmão",
+            preco: "2 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/fV1Zr6hh/produto048.jpg",
+            nome: "Blusa Castanha",
+            preco: "2 000 MT"
+          }
+        ]
+      },
+      conjuntos: {
+        titulo: "Conjuntos",
+        itens: [{
+            img: "https://i.ibb.co/7894p2k/produto049.jpg",
+            nome: "Saia Xadrez P&B",
+            preco: "2 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/nqN0YgCb/produto051.jpg",
+            nome: "Calças 3 000 MT | Capa 3 500 MT",
+            preco: "Conjunto"
+          },
+          {
+            img: "https://i.ibb.co/f3XF16w/produto052.jpg",
+            nome: "Conjunto Vermelho Plissado",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/0VybRcVL/produto053.jpg",
+            nome: "Conjunto Praia Branco",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/XfRSK9gg/produto054.jpg",
+            nome: "Conjunto Tricot Cinza",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/MkXKYRgN/produto055.jpg",
+            nome: "Conjunto Cinza Urso",
+            preco: "4 500 MT"
+          }
+        ]
+      },
+      calcados: {
+        titulo: "Calçados",
+        itens: [{
+            img: "https://i.ibb.co/0kbP9Lx/produto056.jpg",
+            nome: "Sapatilha Nude Laço",
+            preco: "3 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/0jPMSWds/produto057.jpg",
+            nome: "Ténis Glitter Prata",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/wrb7MCpK/produto058.jpg",
+            nome: "Ténis Preto Minimalista",
+            preco: "2 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/sdgC7Hbq/produto059.jpg",
+            nome: "Sapatilha Caramel Fivela",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/F4H47Q0z/produto060.jpg",
+            nome: "Sapatilha Preta Verniz",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/pjX4yRxn/produto061.jpg",
+            nome: "Mocassim Renda Castanho",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/S4ppcjNp/produto062.jpg",
+            nome: "Ténis Caramel Zip",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/p6ZLVB1N/produto063.jpg",
+            nome: "Scarpin Nude Salto",
+            preco: "5 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/W4KsMdvV/produto064.jpg",
+            nome: "Ténis Marinho Acolchoado",
+            preco: "3 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/LDNF36x4/produto065.jpg",
+            nome: "Salto Preto Pied-de-Poule",
+            preco: "5 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/Cs4k8xzb/produto066.jpg",
+            nome: "Salto Bordô Laço",
+            preco: "5 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/CsmqKpQY/produto067.jpg",
+            nome: "Salto Preto Laço Vermelho",
+            preco: "4 800 MT"
+          }
+        ]
+      },
+      calcas: {
+        titulo: "Calças",
+        itens: [{
+            img: "https://i.ibb.co/YBYsTJn3/produto068.jpg",
+            nome: "Calça Flare Preta — Ref 79191 (costas)",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/SXY1sFTJ/produto069.jpg",
+            nome: "Calça Flare Preta — Ref 79191",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/67DL48hd/produto070.jpg",
+            nome: "Calça Skinny Azul Claro R.I.19 — Ref 79186 (costas)",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/9mBtSVjK/produto071.jpg",
+            nome: "Calça Skinny Azul Claro R.I.19 — Ref 79186",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/4RwKqJQF/produto072.jpg",
+            nome: "Calça Wide Leg Marrom — Ref 79107 (costas)",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/pCDQgrs/produto073.jpg",
+            nome: "Calça Wide Leg Marrom — Ref 79107",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/8DLdLR96/produto074.jpg",
+            nome: "Calça Skinny Azul Escuro R.I.19 — Ref 79072 (costas)",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/Mxz7Nj3N/produto075.jpg",
+            nome: "Calça Skinny Azul Escuro R.I.19 — Ref 79072",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/6cRgN2pd/produto076.jpg",
+            nome: "Calça Linha Premium Azul R.I.19 — Ref 79044",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/hJtGhD9b/produto077.jpg",
+            nome: "Calça Plus Levanta Bumbum R.I.19 — Ref 79013 (costas)",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/qLfcgt9L/produto078.jpg",
+            nome: "Calça Plus Levanta Bumbum R.I.19 — Ref 79013",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/60p6qGBy/produto079.jpg",
+            nome: "Calça Pantalona Preta",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/MDWQbFrd/produto080.jpg",
+            nome: "Jeans R.I.19 Rasgadinho",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/7dxQjn28/produto081.jpg",
+            nome: "Jeans R.I.19 Wide Leg",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/7NtxbSyW/produto082.jpg",
+            nome: "Legging Roxa Cintura Alta",
+            preco: "2 900 MT"
+          },
+          {
+            img: "https://i.ibb.co/8LrK0hcB/produto083.jpg",
+            nome: "Legging Animal Print",
+            preco: "1 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/mkSSMf6/produto084.jpg",
+            nome: "Jeans R.I.19 Wide Leg Escuro",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/3mcGcP83/produto085.jpg",
+            nome: "Calça Flare Preta Plus",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/XfgMQzf6/produto086.jpg",
+            nome: "Jeans R.I.19 Estonado Wide Leg",
+            preco: "3 700 MT"
+          },
+          {
+            img: "https://i.ibb.co/gLsPdLk4/produto087.jpg",
+            nome: "Jeans R.I.19 Skinny Plus",
+            preco: "3 700 MT"
+          }
+        ]
+      },
+      produtos: {
+        titulo: "Produtos",
+        itens: [{
+            img: "https://i.ibb.co/Cs2YXzsx/produto088.jpg",
+            nome: "Kit Rosa Mosqueta Eico — Shampoo + Condicionador",
+            preco: "1 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/zWtcCGBs/produto089.jpg",
+            nome: "Kit Dnaplex Gold — Shampoo + Condicionador 250ml",
+            preco: "4 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/hRcjTyTT/produto090.jpg",
+            nome: "Kit Receitinha Poderosa Cenoura & Biotina",
+            preco: "7 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/pj3tpGzw/produto091.jpg",
+            nome: "Kit Babosa & Azeite de Oliva — Gold Spell",
+            preco: "4 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/xWpp77y/produto092.jpg",
+            nome: "Kit Moran Gold — Shampoo + Condicionador",
+            preco: "4 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/gLT99dtP/produto093.jpg",
+            nome: "Salon Line SOS Hidratação Óleo Rícino 1kg",
+            preco: "1 400 MT"
+          },
+          {
+            img: "https://i.ibb.co/CKwQKqXM/produto094.jpg",
+            nome: "DaBelle SOS Crescimento — Óleo em Creme 190ml",
+            preco: "1 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/mrkv0g0g/produto095.jpg",
+            nome: "Anticaspa Skafe / NatuHair 10ml",
+            preco: "200 MT por unidade"
+          },
+          {
+            img: "https://i.ibb.co/FLs5LPss/produto096.jpg",
+            nome: "Salon Line SOS Cachos — Ativador Manga 300ml",
+            preco: "800 MT"
+          },
+          {
+            img: "https://i.ibb.co/5htSdxFv/produto097.jpg",
+            nome: "DaBelle SOS Crescimento — Máscara 800g",
+            preco: "1 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/SX7ppV9q/produto098.jpg",
+            nome: "Gelatina Pink Lemonade — Salon Line",
+            preco: "950 MT"
+          },
+          {
+            img: "https://i.ibb.co/KjM8dC0s/produto099.jpg",
+            nome: "Eico Mandioca — Máscara Efeito Salão",
+            preco: "1 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/99T8QvGY/produto100.jpg",
+            nome: "Gold Spell Poderosa Laranja Power 200g",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/QqQzR59/produto101.jpg",
+            nome: "IsaBaby Condicionador Brilho e Maciez 230ml",
+            preco: "500 MT"
+          },
+          {
+            img: "images/produto102.jpg",
+            nome: "Salon Line SOS Cachos — Ativador Manga (2ª un.)",
+            preco: "1 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/8g3vccbv/produto103.jpg",
+            nome: "Skala 12 em 1 — Restauração e Brilho 1kg",
+            preco: "1 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/tPnYqhxD/produto104.jpg",
+            nome: "Yelsew Orquídea — Eliminador de Pontas 30ml",
+            preco: "350 MT"
+          }
+        ]
+      },
+      calcinhas: {
+        titulo: "Biquínes",
+        itens: [{
+            img: "https://i.ibb.co/FqnccLJ0/produto105.jpg",
+            nome: "Biquíne Cintura Alta Roxo",
+            preco: "750 MT"
+          },
+          {
+            img: "https://i.ibb.co/5XFvcMQb/produto106.jpg",
+            nome: "Biquíne Cintura Alta Nude",
+            preco: "750 MT"
+          },
+          {
+            img: "https://i.ibb.co/DDDpt6SQ/produto107.jpg",
+            nome: "Biquíne Cintura Alta Vermelho",
+            preco: "750 MT"
+          },
+          {
+            img: "https://i.ibb.co/Q77kyDHR/produto108.jpg",
+            nome: "Biquíne Cintura Alta Branco",
+            preco: "750 MT"
+          }
+        ]
+      },
+      colares: {
+        titulo: "Colares",
+        itens: [
+          // { img: "https://link.jpg", nome: "Colar Azul", preco: "500 MT" },
+          {
+            img: "https://i.ibb.co/tw6MJBYn/produto109.jpg",
+            nome: "Colar Esferas Pretas",
+            preco: "1 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/V0mZstN5/produto110.jpg",
+            nome: "Colar Gota — Creme, Verde, Vermelho",
+            preco: "1 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/1J9LPb2H/produto111.jpg",
+            nome: "Colar Medalhão Verde",
+            preco: "1 000 MT"
+          }
+        ]
+      },
+      cintos: {
+        titulo: "Cintos",
+        itens: [{
+            img: "https://i.ibb.co/0yXF2QwD/produto112.jpg",
+            nome: "Cinto Preto Fivela Dourada",
+            preco: "1 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/RJBQRx9/produto113.jpg",
+            nome: "Cinto Camel Fivela Dourada",
+            preco: "1 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/sd8bMS2P/produto114.jpg",
+            nome: "Cintos Finos Trio — Preto, Camel, Bege",
+            preco: "700 MT"
+          },
+          {
+            img: "https://i.ibb.co/F4X1NM7m/produto115.jpg",
+            nome: "Cintos Médios Trio — Vinho, Camel, Bege",
+            preco: "700 MT"
+          },
+          {
+            img: "https://i.ibb.co/gbXpLZQr/produto116.jpg",
+            nome: "Cinto Corrente Prateado",
+            preco: "800 MT"
+          }
+        ]
+      },
+      gym: {
+        titulo: "Roupas de Gym",
+        itens: [{
+            img: "https://i.ibb.co/BKVtVkbn/produto117.jpg",
+            nome: "Conjunto Fitness Preto",
+            preco: "4200 MT"
+          },
+          {
+            img: "https://i.ibb.co/fdVK8n1V/produto118.jpg",
+            nome: "Macacão Fitness Vermelho",
+            preco: "4200 MT"
+          },
+          {
+            img: "https://i.ibb.co/1GHswQqc/produto119.jpg",
+            nome: "Conjunto Gym Azul Claro com Listras Rosa",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/VpMWD40M/produto120.jpg",
+            nome: "Conjunto Gym Chocolate com Detalhe Rosa",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/hFH5g2tt/produto121.jpg",
+            nome: "Conjunto Gym Verde Água com Laço Branco",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/TBhCNBTc/produto122.jpg",
+            nome: "Macacão Gym Preto com Tule",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/93426SJg/produto123.jpg",
+            nome: "Conjunto Gym Azul Bebé com Laço Rosa",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/1xkB1Mq/produto124.jpg",
+            nome: "Conjunto Gym Preto com Tule Cruzado",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/bRdF7K60/produto125.jpg",
+            nome: "Macacão Gym Preto Costas Abertas",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/G4fnjbzQ/produto126.jpg",
+            nome: "Conjunto Gym Nude",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/5hLCbg1j/produto127.jpg",
+            nome: "Conjunto Gym Rosa Pink",
+            preco: "4 200 MT"
+          },
+          {
+            img: "https://i.ibb.co/7tbczjF3/produto128.jpg",
+            nome: "Conjunto Gym Azul com Listra Branca",
+            preco: "3 800 MT"
+          }
+        ]
+      },
+      macacoes: {
+        titulo: "Macacão",
+        itens: [
+          // { img: "https://link.jpg", nome: "Macacão Laranja", preco: "1 500 MT" },
+          {
+            img: "https://i.ibb.co/ymJPT3zP/produto129.jpg",
+            nome: "Macacão Verde Menta",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/7dnVHx5v/produto130.jpg",
+            nome: "Macacão Branco Laço",
+            preco: "3 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/BKCzgbmQ/produto131.jpg",
+            nome: "Macacão Vermelho Pantalona",
+            preco: "4 500 MT"
+          }
+        ]
+      },
+      bolsas: {
+        titulo: "Bolsas",
+        itens: [{
+            img: "https://i.ibb.co/5WxKCBdt/produto132.jpg",
+            nome: "Bolsa Preta Premium",
+            preco: "3 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/hJrvLr0B/produto133.jpg",
+            nome: "Bolsa Camel Rattan",
+            preco: "3 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/CTLD0Lc/produto134.jpg",
+            nome: "Bolsa Hobo Branca",
+            preco: "4 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/MDy3J6tF/produto135.jpg",
+            nome: "Tote Bege & Camel",
+            preco: "4 800 MT"
+          },
+          {
+            img: "https://i.ibb.co/rR9y4sFx/produto136.jpg",
+            nome: "Bolsa Camel Estruturada",
+            preco: "4 500 MT"
+          },
+          {
+            img: "https://i.ibb.co/6RkrHKGp/produto137.jpg",
+            nome: "Bolsa Cinza Sofisticada",
+            preco: "4 000 MT"
+          },
+          {
+            img: "https://i.ibb.co/ycZpdb5j/produto138.jpg",
+            nome: "Bolsa Transversal Monograma",
+            preco: "3 800 MT"
+          }
+        ]
+      },
+      camisolas: {
+        titulo: "Camisolas",
+        itens: [{
+            img: "https://i.ibb.co/tMDpgJFK/produto139.jpg",
+            nome: "Camisola Roxa Tricot",
+            preco: "2 300 MT"
+          },
+          {
+            img: "https://i.ibb.co/TMjQBBNc/produto140.jpg",
+            nome: "Camisola Bege Tricot",
+            preco: "2 300 MT"
+          },
+          {
+            img: "https://i.ibb.co/VYBjhTYR/produto141.jpg",
+            nome: "Camisola Rosa Tricot",
+            preco: "2 300 MT"
+          },
+          {
+            img: "https://i.ibb.co/CsXHsHRH/produto142.jpg",
+            nome: "Corta-Vento Verde Néon",
+            preco: "2 000 MT"
+          }
+        ]
+      },
+    };
+    const WHATSAPP_NUM = "258823914150";
+    /* ── CARRINHO ── */
+    let carrinho = [];
+
+    function totalCarrinho() {
+      const itensComPreco = carrinho.filter(i => i.preco && i.preco !== "");
+      return itensComPreco.length ? itensComPreco.map(i => {
+        const n = parseFloat(i.preco.replace(/[^\d.]/g, '')) * i.qty;
+        return isNaN(n) ? 0 : n;
+      }).reduce((a, b) => a + b, 0) : null;
+    }
+
+    function renderCarrinho() {
+      const el = document.getElementById('cartItems');
+      const footer = document.getElementById('cartFooter');
+      const countEl = document.getElementById('cartCount');
+      const totalEl = document.getElementById('cartTotal');
+      const totalQty = carrinho.reduce((a, i) => a + i.qty, 0);
+      countEl.textContent = totalQty;
+      if (carrinho.length === 0) {
+        el.innerHTML = '<div class="cart-empty-msg">O carrinho está vazio.<br>Adicione peças da coleção!</div>';
+        footer.style.display = 'none';
+        return;
+      }
+      footer.style.display = 'block';
+      el.innerHTML = '';
+      carrinho.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+      <img src="${item.img}" alt="${item.nome}">
+      <div class="cart-item-info">
+        <div class="cart-item-cat">${item.cat}</div>
+        <div class="cart-item-name">${item.nome}</div>
+        ${item.preco ? `<div style="font-size:11px;color:var(--pink-deep);margin-top:3px;">${item.preco}</div>` : ''}
+        <div class="cart-item-qty" style="margin-top:8px;">
+          <button class="qty-btn" data-idx="${idx}" data-op="minus">−</button>
+          <span class="qty-num">${item.qty}</span>
+          <button class="qty-btn" data-idx="${idx}" data-op="plus">+</button>
+        </div>
+      </div>
+      <button class="cart-item-remove" data-idx="${idx}" aria-label="Remover">✕</button>
+    `;
+        el.appendChild(div);
+      });
+      const tot = totalCarrinho();
+      totalEl.textContent = tot !== null ? tot.toLocaleString('pt-MZ') + ' MT' : 'Consultar preço';
+      document.querySelectorAll('.qty-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const i = parseInt(btn.dataset.idx);
+          if (btn.dataset.op === 'plus') carrinho[i].qty++;
+          else {
+            carrinho[i].qty--;
+            if (carrinho[i].qty <= 0) carrinho.splice(i, 1);
+          }
+          renderCarrinho();
+        });
+      });
+      document.querySelectorAll('.cart-item-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          carrinho.splice(parseInt(btn.dataset.idx), 1);
+          renderCarrinho();
+        });
+      });
+    }
+
+    function adicionarAoCarrinho(img, nome, preco, cat) {
+      const existe = carrinho.find(i => i.nome === nome && i.cat === cat);
+      if (existe) {
+        existe.qty++;
+      } else {
+        carrinho.push({
+          img,
+          nome,
+          preco,
+          cat,
+          qty: 1
+        });
+      }
+      renderCarrinho();
+      mostrarToast('✓ ' + nome + ' adicionado ao carrinho');
+    }
+
+    function mostrarToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2800);
+    }
+    /* ── MODAL ── */
+    const overlay = document.getElementById('modalOverlay');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalEyebrow = document.getElementById('modalEyebrow');
+    const modalGrid = document.getElementById('modalGrid');
+    const modalClose = document.getElementById('modalClose');
+
+    function abrirModal(chave) {
+      const cat = produtos[chave];
+      if (!cat) return;
+      modalEyebrow.textContent = "Coleção Kiss Kiss";
+      modalTitle.textContent = cat.titulo;
+      modalGrid.innerHTML = "";
+      if (cat.itens.length === 0) {
+        modalGrid.innerHTML = '<p class="modal-empty">Nenhuma foto adicionada ainda nesta categoria.<br>Em breve novidades! 💕</p>';
+      } else {
+        cat.itens.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'modal-card';
+          // Converte automaticamente links ibb.co para proxy wsrv.nl
+          let imgSrc = p.img;
+          if (imgSrc.includes('ibb.co') && !imgSrc.includes('wsrv.nl')) {
+            const clean = imgSrc.replace('https://i.ibb.co/', '').replace('https://ibb.co/', '');
+            imgSrc = 'https://wsrv.nl/?url=i.ibb.co/' + clean + (clean.includes('&') ? '' : '&w=600');
+          }
+          card.innerHTML = `
+        <img class="card-img" src="${imgSrc}" alt="${p.nome}" loading="lazy" data-img="${imgSrc}" data-nome="${p.nome}" data-preco="${p.preco||''}" data-cat="${cat.titulo}" style="background:#fbecf0;width:100%;aspect-ratio:3/4;object-fit:cover;display:block;">
+        <div class="cap">
+          <div class="pname">${p.nome}</div>
+          ${p.preco ? `<div class="pprice">${p.preco}</div>` : ''}
+        </div>
+        <button class="add-btn" data-img="${p.img}" data-nome="${p.nome}" data-preco="${p.preco||''}" data-cat="${cat.titulo}">
+          + Adicionar ao carrinho
+        </button>
+      `;
+          modalGrid.appendChild(card);
+        });
+        document.querySelectorAll('.add-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            adicionarAoCarrinho(btn.dataset.img, btn.dataset.nome, btn.dataset.preco, btn.dataset.cat);
+          });
+        });
+        document.querySelectorAll('.card-img').forEach(im => {
+          im.addEventListener('click', () => {
+            abrirZoom(im.dataset.img, im.dataset.nome, im.dataset.preco, im.dataset.cat);
+          });
+        });
+      }
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      const mBox = overlay.querySelector('.modal');
+      if (mBox) mBox.scrollTop = 0;
+    }
+
+    function fecharModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.item').forEach(btn => {
+      btn.addEventListener('click', () => abrirModal(btn.dataset.cat));
+    });
+    modalClose.addEventListener('click', fecharModal);
+    document.getElementById('modalBack').addEventListener('click', fecharModal);
+    document.getElementById('modalBackBottom').addEventListener('click', fecharModal);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) fecharModal();
+    });
+    /* ── ZOOM / VISUALIZADOR DE ARTIGO ── */
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    const zoomImg = document.getElementById('zoomImg');
+    const zoomImgWrap = document.getElementById('zoomImgWrap');
+    const zoomName = document.getElementById('zoomName');
+    const zoomPrice = document.getElementById('zoomPrice');
+    const zoomAdd = document.getElementById('zoomAdd');
+    let zoomAtual = null;
+
+    function abrirZoom(img, nome, preco, cat) {
+      zoomAtual = {
+        img,
+        nome,
+        preco,
+        cat
+      };
+      zoomImg.src = img;
+      zoomImg.alt = nome;
+      zoomName.textContent = nome;
+      zoomPrice.textContent = preco || '';
+      zoomImgWrap.classList.remove('zoomed');
+      zoomOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharZoom() {
+      zoomOverlay.classList.remove('open');
+      zoomImgWrap.classList.remove('zoomed');
+      if (overlay.classList.contains('open')) document.body.style.overflow = 'hidden';
+      else document.body.style.overflow = '';
+    }
+    zoomImgWrap.addEventListener('click', () => {
+      zoomImgWrap.classList.toggle('zoomed');
+    });
+    document.getElementById('zoomClose').addEventListener('click', fecharZoom);
+    document.getElementById('zoomVoltar').addEventListener('click', fecharZoom);
+    zoomOverlay.addEventListener('click', e => {
+      if (e.target === zoomOverlay) fecharZoom();
+    });
+    zoomAdd.addEventListener('click', () => {
+      if (zoomAtual) {
+        adicionarAoCarrinho(zoomAtual.img, zoomAtual.nome, zoomAtual.preco, zoomAtual.cat);
+      }
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        if (zoomOverlay.classList.contains('open')) {
+          fecharZoom();
+          return;
+        }
+        fecharModal();
+        fecharCarrinho();
+      }
+    });
+    /* ── CARRINHO ABRIR/FECHAR ── */
+    const cartSidebar = document.getElementById('cartSidebar');
+    const cartOverlay = document.getElementById('cartOverlay');
+
+    function abrirCarrinho() {
+      cartSidebar.classList.add('open');
+      cartOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function fecharCarrinho() {
+      cartSidebar.classList.remove('open');
+      cartOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('openCart').addEventListener('click', abrirCarrinho);
+    document.getElementById('closeCart').addEventListener('click', fecharCarrinho);
+    cartOverlay.addEventListener('click', fecharCarrinho);
+    /* ── WHATSAPP ── */
+    document.getElementById('sendWhatsApp').addEventListener('click', () => {
+      if (carrinho.length === 0) return;
+      let msg = "Olá Kiss Kiss! 💕 Gostaria de encomendar:\n\n";
+      carrinho.forEach(item => {
+        msg += `• ${item.qty}x ${item.nome} (${item.cat})`;
+        if (item.preco) msg += ` — ${item.preco}`;
+        msg += "\n";
+      });
+      const tot = totalCarrinho();
+      if (tot !== null) msg += `\nTotal estimado: ${tot.toLocaleString('pt-MZ')} MT`;
+      msg += "\n\nPor favor confirmar disponibilidade e preço. Obrigada! 🌸";
+      const url = `https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    });
+    renderCarrinho();
+  </script>
+</body>
+
+</html>
